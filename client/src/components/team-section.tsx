@@ -1,26 +1,33 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import aveshImg from "@assets/2afcc629-9b51-45f9-843f-b0dd69f43659_1750257951447.jpg";
+import yuvidiyaImg from "@assets/2fb93a67-1076-4922-bc4a-5d58d91adedb_1750257951448.jpg";
+import zitoImg from "@assets/8c62f278-8075-4bcc-9b5d-7ffb3d0882d1_1750257951449.jpg";
+import sydneyImg from "@assets/9d0a87c9-9851-40e5-b5ea-3fb289ce72c6_1750257951450.jpg";
+import stephImg from "@assets/98cc89a1-aafb-4c1f-b8f9-360d1aa3c173_1750257951450.jpg";
+import felixImg from "@assets/680caf2f-78f8-4d52-aa7f-e8e5af34779b_1750257951451.jpg";
+import thabisoImg from "@assets/87678c2d-0d90-4ee8-8cc3-cc7ec1f35152_1750257951452.jpg";
 
 const executiveTeam = [
   {
     name: "Avesh",
     role: "Founder & Lead Craftsman",
     description: "Master of restoration with 15+ years experience",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+    image: aveshImg,
     borderColor: "border-red-500"
   },
   {
     name: "Yuvidiya",
     role: "Operations Director",
     description: "Strategic operations and client relations expert",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b332c3a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+    image: yuvidiyaImg,
     borderColor: "border-yellow-400"
   },
   {
     name: "Zito",
     role: "Technical Director",
     description: "Engineering precision and innovation specialist",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+    image: zitoImg,
     borderColor: "border-red-500"
   }
 ];
@@ -29,22 +36,22 @@ const productionCrew = [
   {
     name: "Sydney",
     role: "Fabrication Specialist",
-    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200"
+    image: sydneyImg
   },
   {
     name: "Steph",
     role: "Paint & Finish Expert",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200"
+    image: stephImg
   },
   {
     name: "Felix",
     role: "Engine Restoration",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200"
+    image: felixImg
   },
   {
     name: "Thabiso",
     role: "Quality Control",
-    image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200"
+    image: thabisoImg
   }
 ];
 
