@@ -19,15 +19,15 @@ export default function HeroSection() {
       }}
     >
       <motion.div 
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
         className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
         <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          transition={{ duration: 1.2, delay: 0.5 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
         >
           <span className="text-white">Avi's</span>
@@ -35,18 +35,18 @@ export default function HeroSection() {
         </motion.h1>
         
         <motion.p 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
+          transition={{ duration: 1.2, delay: 0.8 }}
           className="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 font-light"
         >
           Land Rover Defenders. <span className="golden-yellow">Reimagined.</span>
         </motion.p>
         
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
+          transition={{ duration: 1.2, delay: 1.1 }}
         >
           <Button 
             onClick={scrollToAbout}
