@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import heroImg from "@assets/7bd67264-d2bf-45c0-9eab-de445b0c15b4_1750258299391.jpg";
@@ -18,8 +17,7 @@ export default function HeroSection() {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${heroImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">

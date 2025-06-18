@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import aveshImg from "@assets/2afcc629-9b51-45f9-843f-b0dd69f43659_1750257951447.jpg";
 import yuvidiyaImg from "@assets/2fb93a67-1076-4922-bc4a-5d58d91adedb_1750257951448.jpg";
@@ -74,11 +73,8 @@ export default function TeamSection() {
           <h3 className="text-2xl font-semibold text-white mb-8 text-center">Executive Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {executiveTeam.map((member, index) => (
-              <motion.div 
+              <div 
                 key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="text-center"
               >
                 <img 
@@ -91,7 +87,7 @@ export default function TeamSection() {
                   {member.role}
                 </p>
                 <p className="text-gray-400 text-sm">{member.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -101,11 +97,8 @@ export default function TeamSection() {
           <h3 className="text-2xl font-semibold text-white mb-8 text-center">Production Crew</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {productionCrew.map((member, index) => (
-              <motion.div 
+              <div 
                 key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="text-center"
               >
                 <img 
@@ -115,10 +108,10 @@ export default function TeamSection() {
                 />
                 <h5 className="text-white font-medium">{member.name}</h5>
                 <p className="text-gray-400 text-sm">{member.role}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

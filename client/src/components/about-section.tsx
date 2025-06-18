@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import aboutImg from "@assets/82cb7b80-da5a-4b8b-ba8a-dd6f2318e310_1750258299392.jpg";
 
