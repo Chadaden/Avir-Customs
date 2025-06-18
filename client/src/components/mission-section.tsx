@@ -7,13 +7,7 @@ export default function MissionSection() {
   return (
     <section id="mission" className="py-20 bg-slate-dark">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center"
-        >
+        <div ref={ref} className="text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-white">Our</span>
             <span className="signal-red"> Mission</span>
@@ -30,7 +24,7 @@ export default function MissionSection() {
               creating timeless machines that will inspire generations of explorers to come.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

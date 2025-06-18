@@ -78,13 +78,7 @@ export default function GallerySection() {
   return (
     <section id="gallery" className="py-20 bg-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center mb-16"
-        >
+        <div ref={ref} className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-white">Our</span>
             <span className="signal-red"> Gallery</span>

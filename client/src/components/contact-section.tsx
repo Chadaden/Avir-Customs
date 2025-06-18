@@ -60,13 +60,7 @@ Message: ${formData.message}`;
   return (
     <section id="contact" className="py-20 bg-slate-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center mb-16"
-        >
+        <div ref={ref} className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-white">Ready to</span>
             <span className="signal-red"> Begin?</span>
@@ -75,15 +69,11 @@ Message: ${formData.message}`;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             "Every Defender we restore carries a timeless legacy, bridging the gap between heritage and the horizons ahead."
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-          >
+          <div>
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
             <div className="space-y-6">
               {/* Email */}
@@ -162,14 +152,10 @@ Message: ${formData.message}`;
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Contact Form */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-          >
+          <div>
             <div className="bg-charcoal rounded-2xl p-8 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Start Your Project</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -223,17 +209,12 @@ Message: ${formData.message}`;
                 </Button>
               </form>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Footer */}
-      <motion.footer 
-        initial={{ opacity: 0, y: 30 }}
-        animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
-        className="mt-20 pt-12 border-t border-gray-800"
-      >
+      <footer className="mt-20 pt-12 border-t border-gray-800">
         <div className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="bg-signal-red w-8 h-6 transform -skew-x-12"></div>
@@ -245,7 +226,7 @@ Message: ${formData.message}`;
             © 2024 Avi's Customs. All rights reserved. | Crafted with passion in Durban, South Africa.
           </p>
         </div>
-      </motion.footer>
+      </footer>
     </section>
   );
 }

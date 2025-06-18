@@ -9,12 +9,7 @@ export default function AboutSection() {
     <section id="about" className="py-20 bg-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            ref={ref}
-            initial={{ opacity: 0, x: -50 }}
-            animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-          >
+          <div ref={ref}>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               <span className="text-white">Who</span>
               <span className="signal-red"> We Are</span>
@@ -33,19 +28,15 @@ export default function AboutSection() {
               From the first sketch to the final polish, every Defender that leaves our workshop carries our 
               signature blend of heritage respect and modern innovation.
             </p>
-          </motion.div>
+          </div>
           
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-          >
+          <div>
             <img 
               src={aboutImg}
               alt="Land Rover Defender restoration in progress at Avi's Customs workshop" 
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

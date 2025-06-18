@@ -61,27 +61,16 @@ export default function TeamSection() {
   return (
     <section id="team" className="py-20 bg-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center mb-16"
-        >
+        <div ref={ref} className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-white">More Than Mechanics.</span>
           </h2>
           <p className="text-2xl golden-yellow font-light mb-4">Storytellers of Steel and Soul.</p>
           <div className="w-20 h-1 bg-golden-yellow mx-auto"></div>
-        </motion.div>
+        </div>
 
         {/* Executive Team */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <h3 className="text-2xl font-semibold text-white mb-8 text-center">Executive Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {executiveTeam.map((member, index) => (
@@ -105,14 +94,10 @@ export default function TeamSection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Production Crew */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-        >
+        <div>
           <h3 className="text-2xl font-semibold text-white mb-8 text-center">Production Crew</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {productionCrew.map((member, index) => (
