@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Wrench, Hammer, Cog, CheckCircle } from "lucide-react";
 

@@ -3,55 +3,45 @@ import aveshImg from "@assets/2afcc629-9b51-45f9-843f-b0dd69f43659_1750257951447
 import yuvidiyaImg from "@assets/2fb93a67-1076-4922-bc4a-5d58d91adedb_1750257951448.jpg";
 import zitoImg from "@assets/8c62f278-8075-4bcc-9b5d-7ffb3d0882d1_1750257951449.jpg";
 import sydneyImg from "@assets/9d0a87c9-9851-40e5-b5ea-3fb289ce72c6_1750257951450.jpg";
-import stephImg from "@assets/98cc89a1-aafb-4c1f-b8f9-360d1aa3c173_1750257951450.jpg";
-import felixImg from "@assets/680caf2f-78f8-4d52-aa7f-e8e5af34779b_1750257951451.jpg";
-import thabisoImg from "@assets/87678c2d-0d90-4ee8-8cc3-cc7ec1f35152_1750257951452.jpg";
+import stephImg from "@assets/680caf2f-78f8-4d52-aa7f-e8e5af34779b_1750257951451.jpg";
+import felixImg from "@assets/87678c2d-0d90-4ee8-8cc3-cc7ec1f35152_1750257951452.jpg";
+import thabisoImg from "@assets/bb9adb5a-ca05-4312-85eb-dba35e5cdaaa_1750257951453.jpg";
+import danteImg from "@assets/c919daeb-6791-4187-ac64-dd0209d9de5b_1750257951453.jpg";
+import chikoImg from "@assets/98cc89a1-aafb-4c1f-b8f9-360d1aa3c173_1750257951450.jpg";
+import rickyImg from "@assets/dd5c3643-8142-4050-a086-2a1cc2b7b54c_1750257951454.jpg";
 
 const executiveTeam = [
   {
     name: "Avesh",
-    role: "Founder & Lead Craftsman",
-    description: "Master of restoration with 15+ years experience",
+    role: "Founder & Lead Designer",
+    description: "The visionary behind every restoration project",
     image: aveshImg,
-    borderColor: "border-red-500"
+    borderColor: "border-signal-red"
   },
   {
-    name: "Yuvidiya",
+    name: "Yuvidiya", 
     role: "Operations Director",
-    description: "Strategic operations and client relations expert",
+    description: "Ensuring every detail meets our premium standards",
     image: yuvidiyaImg,
-    borderColor: "border-yellow-400"
+    borderColor: "border-golden-yellow"
   },
   {
     name: "Zito",
-    role: "Technical Director",
-    description: "Engineering precision and innovation specialist",
+    role: "Technical Manager", 
+    description: "Master of mechanical precision and innovation",
     image: zitoImg,
-    borderColor: "border-red-500"
+    borderColor: "border-signal-red"
   }
 ];
 
 const productionCrew = [
-  {
-    name: "Sydney",
-    role: "Fabrication Specialist",
-    image: sydneyImg
-  },
-  {
-    name: "Steph",
-    role: "Paint & Finish Expert",
-    image: stephImg
-  },
-  {
-    name: "Felix",
-    role: "Engine Restoration",
-    image: felixImg
-  },
-  {
-    name: "Thabiso",
-    role: "Quality Control",
-    image: thabisoImg
-  }
+  { name: "Sydney", role: "Lead Technician", image: sydneyImg },
+  { name: "Steph", role: "Restoration Specialist", image: stephImg },
+  { name: "Felix", role: "Paint & Finish Expert", image: felixImg },
+  { name: "Thabiso", role: "Engine Specialist", image: thabisoImg },
+  { name: "Dante", role: "Interior Craftsman", image: danteImg },
+  { name: "Chiko", role: "Quality Inspector", image: chikoImg },
+  { name: "Ricky", role: "Parts & Logistics", image: rickyImg }
 ];
 
 export default function TeamSection() {

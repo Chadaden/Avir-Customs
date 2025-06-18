@@ -129,8 +129,9 @@
     }
     
     /* Fix mobile hero background */
-    section {
+    section[style*="background-image"] {
       background-attachment: scroll !important;
+      min-height: 100vh !important;
     }
     
     /* Optimize image rendering */

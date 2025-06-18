@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,9 +20,12 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
-              <div className="bg-signal-red w-8 h-6 transform -skew-x-12"></div>
-              <span className="golden-yellow font-bold text-xl">AVI.R</span>
-              <span className="text-white font-light text-sm">CUSTOMS</span>
+              {/* Placeholder for logo icon if re-added */}
+              {/* <div className="bg-signal-red w-8 h-6 transform -skew-x-12"></div> */}
+              <span className="text-xl font-bold">
+                <span className="text-white">Avi's</span>
+                <span className="signal-red"> Customs</span>
+              </span>
             </div>
           </div>
           
@@ -84,55 +86,48 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-dark border-t border-gray-800"
-          >
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
-              >
-                About
-              </button>
-              <button 
-                onClick={() => scrollToSection('mission')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
-              >
-                Mission
-              </button>
-              <button 
-                onClick={() => scrollToSection('team')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
-              >
-                Team
-              </button>
-              <button 
-                onClick={() => scrollToSection('process')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
-              >
-                Process
-              </button>
-              <button 
-                onClick={() => scrollToSection('gallery')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
-              >
-                Gallery
-              </button>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-signal-red text-white block mx-3 my-2"
-              >
-                Contact
-              </Button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-slate-dark border-t border-gray-800">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
+            >
+              About
+            </button>
+            <button 
+              onClick={() => scrollToSection('mission')}
+              className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
+            >
+              Mission
+            </button>
+            <button 
+              onClick={() => scrollToSection('team')}
+              className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
+            >
+              Team
+            </button>
+            <button 
+              onClick={() => scrollToSection('process')}
+              className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
+            >
+              Process
+            </button>
+            <button 
+              onClick={() => scrollToSection('gallery')}
+              className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
+            >
+              Gallery
+            </button>
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-signal-red text-white block mx-3 my-2"
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

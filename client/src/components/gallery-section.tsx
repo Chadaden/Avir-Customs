@@ -51,8 +51,8 @@ const galleryImages = [
 const filterOptions = [
   { label: "All Projects", value: "all" },
   { label: "Before", value: "before" },
-  { label: "After", value: "after" },
-  { label: "Workshop", value: "workshop" }
+  { label: "Workshop", value: "workshop" },
+  { label: "After", value: "after" }
 ];
 
 export default function GallerySection() {
@@ -62,7 +62,7 @@ export default function GallerySection() {
 
   const filteredImages = activeFilter === "all" 
     ? galleryImages 
-    : galleryImages.filter(img => img.category === activeFilter);
+    : galleryImages.filter(image => image.category === activeFilter);
 
   const openLightbox = (imageSrc: string) => {
     setLightboxImage(imageSrc);
@@ -82,92 +82,72 @@ export default function GallerySection() {
             <span className="text-white">Our</span>
             <span className="signal-red"> Gallery</span>
           </h2>
-          <div className="w-20 h-1 bg-golden-yellow mx-auto mb-8"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Witness the transformation. Each project tells a unique story of resurrection and renewal.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Witness the transformation. Each image tells the story of heritage reborn through passion and precision.
           </p>
-          
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {filterOptions.map((option) => (
-              <Button
-                key={option.value}
-                onClick={() => setActiveFilter(option.value)}
-                variant={activeFilter === option.value ? "default" : "outline"}
-                className={`${
-                  activeFilter === option.value 
-                    ? "bg-signal-red text-white hover:bg-red-600" 
-                    : "bg-gray-700 text-gray-300 hover:bg-gray-600 border-gray-600"
-                } px-6 py-2 rounded-full font-medium transition-colors`}
-              >
-                {option.label}
-              </Button>
-            ))}
-          </div>
-        </motion.div>
+          <div className="w-20 h-1 bg-signal-red mx-auto mt-6"></div>
+        </div>
+
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {filterOptions.map((option) => (
+            <Button
+              key={option.value}
+              onClick={() => setActiveFilter(option.value)}
+              variant={activeFilter === option.value ? "default" : "outline"}
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                activeFilter === option.value
+                  ? "bg-signal-red text-white border-signal-red"
+                  : "bg-transparent text-gray-300 border-gray-600 hover:border-signal-red hover:text-signal-red"
+              }`}
+            >
+              {option.label}
+            </Button>
+          ))}
+        </div>
 
         {/* Gallery Grid */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          <AnimatePresence>
-            {filteredImages.map((image, index) => (
-              <motion.div
-                key={`${image.src}-${activeFilter}`}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="cursor-pointer"
-                onClick={() => openLightbox(image.src)}
-              >
-                <img 
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-64 object-cover rounded-xl hover:transform hover:scale-105 transition-transform duration-300 shadow-lg"
-                />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredImages.map((image, index) => (
+            <div
+              key={`${image.src}-${activeFilter}`}
+              className="cursor-pointer"
+              onClick={() => openLightbox(image.src)}
+            >
+              <img 
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-64 object-cover rounded-xl hover:transform hover:scale-105 transition-transform duration-300 shadow-lg"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Lightbox Modal */}
-      <AnimatePresence>
-        {lightboxImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-            onClick={closeLightbox}
-          >
-            <div className="relative max-w-4xl max-h-full">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={closeLightbox}
-                className="absolute -top-10 right-0 text-white text-2xl hover:text-signal-red transition-colors"
-              >
-                <X className="h-8 w-8" />
-              </Button>
-              <motion.img
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                src={lightboxImage}
-                alt=""
-                className="max-w-full max-h-full object-contain rounded-lg"
-                onClick={(e) => e.stopPropagation()}
-              />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={closeLightbox}
+              className="absolute -top-10 right-0 text-white text-2xl hover:text-signal-red transition-colors"
+            >
+              <X className="h-8 w-8" />
+            </Button>
+            <img
+              src={lightboxImage}
+              alt=""
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
