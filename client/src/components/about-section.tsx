@@ -15,24 +15,24 @@ export default function AboutSection() {
             </h2>
             <div className="w-20 h-1 bg-golden-yellow mb-8"></div>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              At Avi's Customs, we don't just restore Land Rover Defenders – we breathe new life into legends. 
-              Every bolt, every panel, every stitch tells a story of meticulous craftsmanship and unwavering passion.
+              Deep in the heart of Durban's industrial district, we breathe new life into 25-year-old Land Rover Defenders. 
+              At Avi.r Customs, we reimagine these icons with robust luxury, crafting companions for South Africa's wild beauty.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Based in the heart of Durban, our workshop is where automotive dreams become reality. We're 
-              <span className="golden-yellow font-semibold"> crafting companions for South Africa's wild beauty</span>, 
-              building vehicles that don't just traverse landscapes – they conquer them.
+              Every restoration project tells a story of meticulous craftsmanship and unwavering passion. We don't just restore vehicles - 
+              <span className="golden-yellow font-semibold"> we craft legends that honor the Defender's heritage</span> 
+              while embracing modern luxury and performance.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              From the first sketch to the final polish, every Defender that leaves our workshop carries our 
-              signature blend of heritage respect and modern innovation.
+              From the first bolt to the final polish, every Defender that leaves our workshop carries our 
+              signature blend of authentic restoration and contemporary innovation.
             </p>
           </div>
           
           <div>
             <img 
               src={aboutImg}
-              alt="Land Rover Defender restoration in progress at Avi's Customs workshop" 
+              alt="Land Rover Defender restoration in progress at Avi.r Customs workshop" 
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
           </div>

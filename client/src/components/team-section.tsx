@@ -1,14 +1,14 @@
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-import aveshImg from "@assets/2afcc629-9b51-45f9-843f-b0dd69f43659_1750257951447.jpg";
-import yuvidiyaImg from "@assets/2fb93a67-1076-4922-bc4a-5d58d91adedb_1750257951448.jpg";
-import zitoImg from "@assets/8c62f278-8075-4bcc-9b5d-7ffb3d0882d1_1750257951449.jpg";
-import sydneyImg from "@assets/9d0a87c9-9851-40e5-b5ea-3fb289ce72c6_1750257951450.jpg";
-import stephImg from "@assets/680caf2f-78f8-4d52-aa7f-e8e5af34779b_1750257951451.jpg";
-import felixImg from "@assets/87678c2d-0d90-4ee8-8cc3-cc7ec1f35152_1750257951452.jpg";
-import thabisoImg from "@assets/bb9adb5a-ca05-4312-85eb-dba35e5cdaaa_1750257951453.jpg";
-import danteImg from "@assets/c919daeb-6791-4187-ac64-dd0209d9de5b_1750257951453.jpg";
-import chikoImg from "@assets/98cc89a1-aafb-4c1f-b8f9-360d1aa3c173_1750257951450.jpg";
-import rickyImg from "@assets/dd5c3643-8142-4050-a086-2a1cc2b7b54c_1750257951454.jpg";
+import aveshImg from "@assets/Avesh_1750261429889.jpg";
+import yuvidiyaImg from "@assets/Yuvidiya_1750261429895.jpg";
+import zitoImg from "@assets/Zito_1750261429888.jpg";
+import sydneyImg from "@assets/Sydney_1750261429893.jpg";
+import stephImg from "@assets/Steph_1750261429893.jpg";
+import felixImg from "@assets/Felix_1750261429891.jpg";
+import thabisoImg from "@assets/Thabiso_1750261429894.jpg";
+import danteImg from "@assets/Dante_1750261429890.jpg";
+import chikoImg from "@assets/Chiko_1750261429890.jpg";
+import rickyImg from "@assets/Ricky_1750261429892.jpg";
 
 const executiveTeam = [
   {

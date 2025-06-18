@@ -14,13 +14,12 @@ export default function MissionSection() {
           <div className="w-20 h-1 bg-signal-red mx-auto mb-12"></div>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              To preserve the iconic spirit of Land Rover Defenders while elevating them to meet the demands 
-              of modern adventurers. We bridge the gap between classic heritage and contemporary performance, 
-              ensuring every restoration honors the past while embracing the future.
+              To build the best Defenders in South Africa, where every part is custom or brand new, 
+              and luxury meets adventure.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
-              Our mission extends beyond restoration – we're guardians of automotive history, 
-              creating timeless machines that will inspire generations of explorers to come.
+              At Avi.r Customs, we reimagine these icons with robust luxury, crafting companions for South Africa's wild beauty. 
+              Our mission extends beyond restoration – we're creating timeless machines built for the modern adventurer.
             </p>
           </div>
         </div>

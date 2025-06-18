@@ -67,7 +67,7 @@ Message: ${formData.message}`;
           </h2>
           <div className="w-20 h-1 bg-golden-yellow mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            "Every Defender we restore carries a timeless legacy, bridging the gap between heritage and the horizons ahead."
+            Ready to transform your Land Rover Defender? Contact Avi.r Customs today to discuss your restoration project.
           </p>
         </div>
 

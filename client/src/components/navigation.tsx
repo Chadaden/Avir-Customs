@@ -23,7 +23,7 @@ export default function Navigation() {
               {/* Placeholder for logo icon if re-added */}
               {/* <div className="bg-signal-red w-8 h-6 transform -skew-x-12"></div> */}
               <span className="text-xl font-bold">
-                <span className="text-white">Avi's</span>
+                <span className="text-white">Avi.r</span>
                 <span className="signal-red"> Customs</span>
               </span>
             </div>

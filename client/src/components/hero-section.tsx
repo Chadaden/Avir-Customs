@@ -22,12 +22,12 @@ export default function HeroSection() {
     >
       <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span className="text-white">Avi's</span>
+          <span className="text-white">Avi.r</span>
           <span className="signal-red block sm:inline"> Customs</span>
         </h1>
         
         <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 font-light">
-          Land Rover Defenders. <span className="golden-yellow">Reimagined.</span>
+          Deep in the heart of Durban's industrial district, we breathe new life into 25-year-old Land Rover Defenders
         </p>
         
         <div>
