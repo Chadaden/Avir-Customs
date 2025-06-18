@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import heroImg from "@assets/7bd67264-d2bf-45c0-9eab-de445b0c15b4_1750258299391.jpg";
 
 export default function HeroSection() {
   const scrollToAbout = () => {
@@ -14,7 +15,7 @@ export default function HeroSection() {
     <section 
       className="relative h-screen flex items-center justify-center hero-parallax"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${heroImg})`
       }}
     >
       <motion.div 

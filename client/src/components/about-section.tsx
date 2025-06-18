@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import aboutImg from "@assets/82cb7b80-da5a-4b8b-ba8a-dd6f2318e310_1750258299392.jpg";
 
 export default function AboutSection() {
   const { ref, isIntersecting } = useIntersectionObserver();
@@ -12,7 +13,7 @@ export default function AboutSection() {
             ref={ref}
             initial={{ opacity: 0, x: -50 }}
             animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               <span className="text-white">Who</span>
@@ -37,10 +38,10 @@ export default function AboutSection() {
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              src={aboutImg}
               alt="Land Rover Defender restoration in progress at Avi's Customs workshop" 
               className="rounded-2xl shadow-2xl w-full h-auto"
             />

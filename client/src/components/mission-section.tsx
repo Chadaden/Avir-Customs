@@ -11,7 +11,7 @@ export default function MissionSection() {
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">

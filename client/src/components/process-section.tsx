@@ -43,7 +43,7 @@ export default function ProcessSection() {
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -65,7 +65,7 @@ export default function ProcessSection() {
                 key={step.number}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.2 * index }}
+                transition={{ duration: 1, delay: 0.2 * index, ease: "easeOut" }}
                 className="text-center"
               >
                 <div className={`bg-charcoal rounded-2xl p-8 h-full border border-gray-700 ${step.hoverColor} transition-colors duration-300`}>

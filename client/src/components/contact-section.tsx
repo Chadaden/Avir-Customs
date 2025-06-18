@@ -64,7 +64,7 @@ Message: ${formData.message}`;
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -82,7 +82,7 @@ Message: ${formData.message}`;
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
           >
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
             <div className="space-y-6">
@@ -168,7 +168,7 @@ Message: ${formData.message}`;
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
           >
             <div className="bg-charcoal rounded-2xl p-8 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Start Your Project</h3>
@@ -231,7 +231,7 @@ Message: ${formData.message}`;
       <motion.footer 
         initial={{ opacity: 0, y: 30 }}
         animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 0.6 }}
+        transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
         className="mt-20 pt-12 border-t border-gray-800"
       >
         <div className="text-center">

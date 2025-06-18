@@ -3,36 +3,48 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import galleryImg1 from "@assets/3df6e336-e7bd-4503-81f2-c63e3d38677b_1750258299390.jpg";
+import galleryImg2 from "@assets/7bd67264-d2bf-45c0-9eab-de445b0c15b4_1750258299391.jpg";
+import galleryImg3 from "@assets/82cb7b80-da5a-4b8b-ba8a-dd6f2318e310_1750258299392.jpg";
+import galleryImg4 from "@assets/87cce036-7af0-4802-bce1-621d72c2497f_1750258299392.jpg";
+import galleryImg5 from "@assets/4369e8c1-619d-448d-81d0-d8aeac734602_1750258299393.jpg";
+import galleryImg6 from "@assets/9444e1e0-4c72-4d24-af7f-89f7a50bc624_1750258299394.jpg";
+import galleryImg7 from "@assets/be892460-12ef-4994-bb5b-3e0c2469057a_1750258299394.jpg";
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Completed Land Rover Defender restoration showcasing pristine finish",
+    src: galleryImg1,
+    alt: "Land Rover Defender front detail with custom headlights and grille",
     category: "after"
   },
   {
-    src: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Engine restoration work in progress at Avi's Customs workshop",
+    src: galleryImg2,
+    alt: "Complete Land Rover Defender restoration in workshop setting",
     category: "workshop"
   },
   {
-    src: "https://images.unsplash.com/photo-1581834474154-8c5c0fc6b3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Land Rover Defender before restoration showing weathered condition",
-    category: "before"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Custom leather interior restoration of Land Rover Defender",
+    src: galleryImg3,
+    alt: "Land Rover Defender wheel and tire detail showing off-road capability",
     category: "after"
   },
   {
-    src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Precision welding work during Defender chassis restoration",
-    category: "workshop"
+    src: galleryImg4,
+    alt: "Atmospheric lighting on completed Land Rover Defender",
+    category: "after"
   },
   {
-    src: "https://images.unsplash.com/photo-1606016420984-70900a5c11a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Fully restored Land Rover Defender ready for off-road adventures",
+    src: galleryImg5,
+    alt: "Land Rover Defender front end with premium finish",
+    category: "after"
+  },
+  {
+    src: galleryImg6,
+    alt: "Custom red leather interior of restored Land Rover Defender",
+    category: "after"
+  },
+  {
+    src: galleryImg7,
+    alt: "Premium leather detailing in Land Rover Defender interior",
     category: "after"
   }
 ];
@@ -70,7 +82,7 @@ export default function GallerySection() {
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -105,17 +117,18 @@ export default function GallerySection() {
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {filteredImages.map((image, index) => (
               <motion.div
-                key={`${activeFilter}-${index}`}
-                initial={{ opacity: 0, scale: 0.8 }}
+                key={`${image.src}-${activeFilter}`}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 className="cursor-pointer"
                 onClick={() => openLightbox(image.src)}
               >

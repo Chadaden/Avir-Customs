@@ -113,13 +113,24 @@
 
   .fade-in-section {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(40px);
+    transition: all 1.2s ease-out;
   }
 
   .fade-in-section.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Smooth scroll for better mobile experience */
+  @media (max-width: 768px) {
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .fade-in-section {
+      transition: all 1s ease-out;
+    }
   }
 }
 
