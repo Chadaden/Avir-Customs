@@ -1,0 +1,167 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+
+const galleryImages = [
+  {
+    src: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    alt: "Completed Land Rover Defender restoration showcasing pristine finish",
+    category: "after"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    alt: "Engine restoration work in progress at Avi's Customs workshop",
+    category: "workshop"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1581834474154-8c5c0fc6b3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    alt: "Land Rover Defender before restoration showing weathered condition",
+    category: "before"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    alt: "Custom leather interior restoration of Land Rover Defender",
+    category: "after"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    alt: "Precision welding work during Defender chassis restoration",
+    category: "workshop"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1606016420984-70900a5c11a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    alt: "Fully restored Land Rover Defender ready for off-road adventures",
+    category: "after"
+  }
+];
+
+const filterOptions = [
+  { label: "All Projects", value: "all" },
+  { label: "Before", value: "before" },
+  { label: "After", value: "after" },
+  { label: "Workshop", value: "workshop" }
+];
+
+export default function GallerySection() {
+  const { ref, isIntersecting } = useIntersectionObserver();
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
+  const filteredImages = activeFilter === "all" 
+    ? galleryImages 
+    : galleryImages.filter(img => img.category === activeFilter);
+
+  const openLightbox = (imageSrc: string) => {
+    setLightboxImage(imageSrc);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+    document.body.style.overflow = 'auto';
+  };
+
+  return (
+    <section id="gallery" className="py-20 bg-charcoal">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+            <span className="text-white">Our</span>
+            <span className="signal-red"> Gallery</span>
+          </h2>
+          <div className="w-20 h-1 bg-golden-yellow mx-auto mb-8"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Witness the transformation. Each project tells a unique story of resurrection and renewal.
+          </p>
+          
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {filterOptions.map((option) => (
+              <Button
+                key={option.value}
+                onClick={() => setActiveFilter(option.value)}
+                variant={activeFilter === option.value ? "default" : "outline"}
+                className={`${
+                  activeFilter === option.value 
+                    ? "bg-signal-red text-white hover:bg-red-600" 
+                    : "bg-gray-700 text-gray-300 hover:bg-gray-600 border-gray-600"
+                } px-6 py-2 rounded-full font-medium transition-colors`}
+              >
+                {option.label}
+              </Button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Gallery Grid */}
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <AnimatePresence mode="wait">
+            {filteredImages.map((image, index) => (
+              <motion.div
+                key={`${activeFilter}-${index}`}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="cursor-pointer"
+                onClick={() => openLightbox(image.src)}
+              >
+                <img 
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover rounded-xl hover:transform hover:scale-105 transition-transform duration-300 shadow-lg"
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {lightboxImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+            onClick={closeLightbox}
+          >
+            <div className="relative max-w-4xl max-h-full">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={closeLightbox}
+                className="absolute -top-10 right-0 text-white text-2xl hover:text-signal-red transition-colors"
+              >
+                <X className="h-8 w-8" />
+              </Button>
+              <motion.img
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                src={lightboxImage}
+                alt=""
+                className="max-w-full max-h-full object-contain rounded-lg"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+}

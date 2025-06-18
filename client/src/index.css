@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 40%, 2%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 40%, 8%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(210, 40%, 2%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 40%, 6%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(215, 27.9%, 16.9%);
+  --input: hsl(215, 27.9%, 16.9%);
+  --primary: hsl(0, 84.2%, 60.2%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(215, 27.9%, 16.9%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(45, 93%, 68%);
+  --accent-foreground: hsl(210, 40%, 2%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(0, 84.2%, 60.2%);
+  --radius: 0.5rem;
+  
+  /* Custom Avi's Customs colors */
+  --signal-red: hsl(0, 84.2%, 60.2%);
+  --golden-yellow: hsl(45, 93%, 68%);
+  --charcoal: hsl(0, 0%, 10.2%);
+  --slate-dark: hsl(222, 84%, 4.9%);
+}
+
+.dark {
+  --background: hsl(210, 40%, 2%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 40%, 8%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(210, 40%, 2%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 40%, 6%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(215, 27.9%, 16.9%);
+  --input: hsl(215, 27.9%, 16.9%);
+  --primary: hsl(0, 84.2%, 60.2%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(215, 27.9%, 16.9%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(45, 93%, 68%);
+  --accent-foreground: hsl(210, 40%, 2%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(212.7, 26.8%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .signal-red {
+    color: var(--signal-red);
+  }
+  
+  .bg-signal-red {
+    background-color: var(--signal-red);
+  }
+  
+  .golden-yellow {
+    color: var(--golden-yellow);
+  }
+  
+  .bg-golden-yellow {
+    background-color: var(--golden-yellow);
+  }
+  
+  .charcoal {
+    color: var(--charcoal);
+  }
+  
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+  
+  .slate-dark {
+    color: var(--slate-dark);
+  }
+  
+  .bg-slate-dark {
+    background-color: var(--slate-dark);
+  }
+
+  .hero-parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
