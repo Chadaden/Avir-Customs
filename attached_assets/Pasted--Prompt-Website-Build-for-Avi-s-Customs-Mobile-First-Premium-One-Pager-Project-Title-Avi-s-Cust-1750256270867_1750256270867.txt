@@ -1,0 +1,99 @@
+ Prompt: Website Build for Avi’s Customs (Mobile-First Premium One-Pager)
+
+Project Title: Avi’s Customs — Premium Land Rover Restorations
+
+Overview:
+Create a mobile-first, single-scroll premium website for Avi’s Customs, a Durban-based workshop that restores and customizes Land Rover Defenders. The tone is sleek, modern, and industrial, with visual cues taken from Apple, Land Rover, and luxury vehicle brands.
+
+🔳 Design Style & Aesthetic
+Color Theme: Dark greys, matte blacks for backgrounds
+
+Accent Colors: Red and yellow (from the logo) for buttons, highlights, and section dividers
+
+Typography: Clean, modern sans-serif (like SF Pro or Montserrat)
+
+Moodboard Style: Think Apple product pages meets Land Rover’s luxury off-road vibe
+
+Image Use: Use the provided team/process images as full-width background layers or overlaid cards
+
+Interaction: Parallax, fade-in, or smooth scroll where possible — but keep it lightweight and mobile-optimized
+
+📱 Structure (One-Page Flow)
+Hero Section (Landing)
+
+Background: Bold, cinematic Defender image from gallery
+
+Logo top-left (red/yellow)
+
+Bold headline: “Avi’s Customs”
+
+Subline: “Land Rover Defenders. Reimagined.”
+
+CTA Button: “Explore the Build” → scrolls to About
+
+About Us Section
+
+Use image + copy from screenshot titled “About Us”
+
+Title: “Who We Are”
+
+Body copy: Exact same text as provided
+
+Visual cue: Underline or highlight key line — “crafting companions for South Africa’s wild beauty”
+
+Mission Section
+
+Exact copy from brochure
+
+Title: “Our Mission”
+
+Section styling: Red underline or left-bar accent
+
+Meet the Team (Split View)
+
+Exec Team: Avesh, Yuvidiya, Zito — use circular portraits as shown
+
+Production Crew: Sydney, Steph, Felix, Thabiso, etc. – use grid layout with role captions
+
+Section title: “More Than Mechanics. Storytellers of Steel and Soul.”
+
+Restoration Process
+
+4 Steps: Stripping → Fabrication → Assembly → Quality Control
+
+Use same visuals/icons as provided
+
+Option: Show process vertically or as a connected timeline (with icons)
+
+Gallery Section
+
+Grid of 6–9 images (you can placeholder for now)
+
+Optional filter: Before / After / In Workshop
+
+Image lightbox if possible
+
+Contact Section
+
+Pull exact contact info from final screenshot
+
+Include:
+
+📧 avi.r.customs@gmail.com
+
+📞 Avesh: +27 76 046 4792, Yuvidiya: +27 82 062 6924
+
+📍 16 Bassa Crescent, Queensmead Industrial, Queensburgh 4093
+
+Quote overlay: “Every Defender we restore carries a timeless legacy…”
+
+🛠 Functional Specs
+Responsive across mobile + web
+
+No login needed
+
+WhatsApp-optimized (loads fast, scrolls smooth)
+
+Option for gallery updates later via backend (if possible)
+
+Light animation (optional): fade-in team, scroll-triggered process reveal
