@@ -1,6 +1,6 @@
 [build]
-  # Build command for Netlify
-  command = "npm run build:static"
+  # Build command for Netlify (direct command since script doesn't exist in package.json)
+  command = "npx vite build --config vite.config.netlify.ts"
   # Directory to publish (static files only)
   publish = "dist-static"
 

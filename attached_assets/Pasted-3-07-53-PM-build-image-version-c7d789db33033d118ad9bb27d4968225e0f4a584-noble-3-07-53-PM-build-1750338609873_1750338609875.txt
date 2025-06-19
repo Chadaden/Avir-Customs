@@ -1,0 +1,112 @@
+3:07:53 PM: build-image version: c7d789db33033d118ad9bb27d4968225e0f4a584 (noble)
+3:07:53 PM: buildbot version: c7d789db33033d118ad9bb27d4968225e0f4a584
+3:07:53 PM: Fetching cached dependencies
+3:07:53 PM: Failed to fetch cache, continuing with build
+3:07:53 PM: Starting to prepare the repo for build
+3:07:53 PM: No cached dependencies found. Cloning fresh repo
+3:07:53 PM: git clone --filter=blob:none https://github.com/Chadaden/Avir-Customs
+3:07:53 PM: Preparing Git Reference refs/heads/main
+3:07:55 PM: Custom build command detected. Proceeding with the specified command: 'npm run build:static'
+3:07:55 PM: Starting to install dependencies
+3:07:55 PM: Python version set to 3.13.3
+3:07:55 PM: Ruby version set to 3.4.3
+3:07:56 PM: Go version set to 1.24.4
+3:07:56 PM: Using PHP version
+3:07:57 PM: Downloading and installing node v20.19.2...
+3:07:57 PM: Downloading https://nodejs.org/dist/v20.19.2/node-v20.19.2-linux-x64.tar.xz...
+3:07:57 PM: Computing checksum with sha256sum
+3:07:57 PM: Checksums matched!
+3:08:00 PM: Now using node v20.19.2 (npm v10.8.2)
+3:08:00 PM: Enabling Node.js Corepack
+3:08:00 PM: Started restoring cached build plugins
+3:08:00 PM: Finished restoring cached build plugins
+3:08:00 PM: Started restoring cached corepack dependencies
+3:08:00 PM: Finished restoring cached corepack dependencies
+3:08:00 PM: No npm workspaces detected
+3:08:00 PM: Started restoring cached node modules
+3:08:00 PM: Finished restoring cached node modules
+3:08:00 PM: Installing npm packages using npm version 10.8.2
+3:08:04 PM: npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+3:08:04 PM: npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+3:08:12 PM: added 481 packages in 12s
+3:08:12 PM: npm packages installed
+3:08:13 PM: Successfully installed dependencies
+3:08:13 PM: Starting build script
+3:08:14 PM: Detected 1 framework(s)
+3:08:14 PM: "vite" at version "5.4.14"
+3:08:14 PM: Section completed: initializing
+3:08:16 PM: ​
+3:08:16 PM: Netlify Build                                                 
+3:08:16 PM: ────────────────────────────────────────────────────────────────
+3:08:16 PM: ​
+3:08:16 PM: ❯ Version
+3:08:16 PM:   @netlify/build 33.4.6
+3:08:16 PM: ​
+3:08:16 PM: ❯ Flags
+3:08:16 PM:   accountId: 6853c5ed5e51ac130b207d00
+3:08:16 PM:   baseRelDir: true
+3:08:16 PM:   buildId: 68540ba80d0426d153755510
+3:08:16 PM:   deployId: 68540ba80d0426d153755512
+3:08:16 PM: ​
+3:08:16 PM: ❯ Current directory
+3:08:16 PM:   /opt/build/repo
+3:08:16 PM: ​
+3:08:16 PM: ❯ Config file
+3:08:16 PM:   /opt/build/repo/netlify.toml
+3:08:16 PM: ​
+3:08:16 PM: ❯ Context
+3:08:16 PM:   production
+3:08:16 PM: ​
+3:08:16 PM: ❯ Installing extensions
+3:08:16 PM:    - neon
+3:09:15 PM: ​
+3:09:15 PM: ❯ Loading extensions
+3:09:15 PM:    - neon
+3:09:16 PM: ​
+3:09:16 PM: build.command from netlify.toml                               
+3:09:16 PM: ────────────────────────────────────────────────────────────────
+3:09:16 PM: ​
+3:09:16 PM: $ npm run build:static
+3:09:17 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2
+3:09:17 PM: npm error Missing script: "build:static"
+3:09:17 PM: npm error
+3:09:17 PM: npm error To see a list of scripts, run:
+3:09:17 PM: npm error   npm run
+3:09:17 PM: npm error A complete log of this run can be found in: /opt/buildhome/.npm/_logs/2025-06-19T13_09_17_042Z-debug-0.log
+3:09:17 PM: ​
+3:09:17 PM: "build.command" failed                                        
+3:09:17 PM: ────────────────────────────────────────────────────────────────
+3:09:17 PM: ​
+3:09:17 PM:   Error message
+3:09:17 PM:   Command failed with exit code 1: npm run build:static
+3:09:17 PM: ​
+3:09:17 PM:   Error location
+3:09:17 PM:   In build.command from netlify.toml:
+3:09:17 PM:   npm run build:static
+3:09:17 PM: ​
+3:09:17 PM:   Resolved config
+3:09:17 PM:   build:
+3:09:17 PM:     command: npm run build:static
+3:09:17 PM:     commandOrigin: config
+3:09:17 PM:     environment:
+3:09:17 PM:       - NODE_VERSION
+3:09:17 PM:     publish: /opt/build/repo/dist-static
+3:09:17 PM:     publishOrigin: config
+3:09:17 PM:   headers:
+3:09:17 PM:     - for: /*
+      values:
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; mode=block
+    - for: /assets/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+  headersOrigin: config
+  redirects:
+    - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+3:09:17 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+3:09:17 PM: Failing build: Failed to build site
+3:09:18 PM: Finished processing build request in 1m24.803s

@@ -22,10 +22,12 @@ I've created a static-only build configuration that produces files compatible wi
 
 1. Push this project to GitHub
 2. Connect your GitHub repository to Netlify
-3. In Netlify build settings, use:
+3. The `netlify.toml` file will automatically configure:
    - **Build command**: `npx vite build --config vite.config.netlify.ts`
    - **Publish directory**: `dist-static`
 4. Deploy
+
+**Note**: If you need to manually set build settings in Netlify UI, use the command and directory listed above.
 
 ### Method 2: Manual Upload
 
